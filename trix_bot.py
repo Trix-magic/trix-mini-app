@@ -88,12 +88,8 @@ def main():
     application.add_handler(CommandHandler("bonus", bonus))
     application.add_handler(CommandHandler("miniapp", miniapp))
 
-    # Запуск вебхука
-    application.run_webhook(
-        listen="0.0.0.0",
-        port=8080,
-        webhook_url="https://08b6-2a00-1858-1022-c70b-58ce-63d4-1caf-9dcc.ngrok-free.app/webhook"
-    )
+    # Запуск Polling
+    application.run_polling()
 
 if __name__ == "__main__":
     main()
